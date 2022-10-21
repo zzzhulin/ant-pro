@@ -1,0 +1,203 @@
+@import '~antd/es/style/themes/default.less';
+
+@processing-color-hover: color(~`colorPalette('@{processing-color}', 5) `);
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.ant-pro-basicLayout-content-disable-margin {
+  margin: 10px;
+}
+
+.ant-layout-content > div:not(.ka-wrapper) {
+  top: 5px;
+  z-index: 99 !important;
+  width: auto !important;
+  .panel-tabs-bar {
+    width: auto;
+    padding-left: 0;
+    .ant-space {
+      display: none !important;
+    }
+  }
+}
+
+.ant-layout-content > .ka-wrapper {
+  .ka-content > div {
+    margin-top: 0 !important;
+  }
+}
+
+.ant-pro-table .ant-pro-table-search {
+  padding: 24px 10px 0 10px;
+}
+
+.ant-pro-table .ant-pro-card-body {
+  padding: 0 10px;
+}
+
+.ant-modal {
+  .ant-pro-table .ant-pro-card-body {
+    padding: 0;
+  }
+}
+
+.ant-btn-link.ant-btn-processing:not([disabled]) {
+  color: @processing-color;
+}
+
+.ant-btn-link.ant-btn-processing:not([disabled]):hover {
+  color: @processing-color-hover;
+}
+
+.ant-btn-link.ant-btn-success:not([disabled]) {
+  color: @success-color;
+}
+
+.ant-btn-link.ant-btn-success:not([disabled]):hover {
+  color: @success-color-hover;
+}
+
+.ant-btn-link.ant-btn-error:not([disabled]) {
+  color: @error-color;
+}
+
+.ant-btn-link.ant-btn-error:not([disabled]):hover {
+  color: @error-color-hover;
+}
+
+.ant-btn-link.ant-btn-processing.ant-btn-disabled,
+.ant-btn-link.ant-btn-processing.ant-btn-disabled:hover {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+.ant-tooltip-inner > .ant-btn-link.ant-btn-processing {
+  color: #fff;
+}
+
+.editable-cell-input-wrap,
+td.warning .editable-cell-value-wrap,
+td.error .editable-cell-value-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  transition: background 0.3s;
+}
+
+.editable-cell-input-wrap {
+  right: 8px;
+  left: 8px;
+  padding: 0;
+}
+
+a.ant-typography-ellipsis > div:not(.ant-typography-copy),
+span.ant-typography-ellipsis > div:not(.ant-typography-copy) {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.editable-cell-input-wrap.ant-form-item-has-error {
+  position: static;
+}
+
+.ant-table-tbody > tr.ant-table-row-selected > td.warning .editable-cell-value-wrap,
+td.warning .editable-cell-value-wrap,
+.ant-table-tbody > tr.ant-table-row-selected > td.error .editable-cell-value-wrap,
+td.error .editable-cell-value-wrap {
+  color: #fff;
+  background-color: @primary-color;
+  .ant-typography {
+    color: #fff;
+  }
+}
+
+.ant-table-tbody > tr.ant-table-row-selected > td.error .editable-cell-value-wrap,
+td.error .editable-cell-value-wrap {
+  background-color: @error-color;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td.warning .editable-cell-value-wrap,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover.warning .editable-cell-value-wrap {
+  background-color: @primary-color-hover;
+}
+
+.ant-table-tbody > tr.ant-table-row:hover > td.error .editable-cell-value-wrap,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover.error .editable-cell-value-wrap {
+  background-color: @error-color-hover;
+}
+
+.ant-table-placeholder .ant-table-cell {
+  pointer-events: none;
+}
+
+.ant-table-empty .ant-table-tbody > tr.ant-table-placeholder td {
+  border-bottom: none;
+}
+
+.ant-table-selection-column .react-resizable-handle {
+  display: none;
+}
+
+.ant-table-tbody > tr.ant-table-placeholder {
+  position: absolute;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}

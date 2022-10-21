@@ -1,0 +1,30 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": [
+    "antd",
+    "Approvalor",
+    "batchno",
+    "Caseid",
+    "clientid",
+    "createtime",
+    "Createuserid",
+    "Datas",
+    "eadp",
+    "esbuild",
+    "mfsu",
+    "mockjs",
+    "productline",
+    "sampleindex",
+    "sider",
+    "Siderbar",
+    "stylelint",
+    "stylelintrc",
+    "subproduct",
+    "testid",
+    "umijs",
+    "updatetime",
+    "Updateuserid"
+  ]
+}
